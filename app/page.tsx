@@ -4,10 +4,18 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
-import { Briefcase, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { TypingText } from "@/components/animate-ui/primitives/texts/typing";
+import {
+  Briefcase,
+  Users,
+  MagnifyingGlass,
+  Lightning,
+  ShieldCheck,
+  Globe,
+} from "@phosphor-icons/react";
 
 
 
@@ -105,13 +113,13 @@ export default function Home() {
       </nav>
       {/* Hero section */}
       <main className="flex-1">
-        <section className="grid h-150 grid-cols-1 bg-[#eaeaea] md:grid-cols-2 mb-60 md:mb-50">
+        <section className="grid h-auto md:h-150 grid-cols-1 bg-[#eaeaea] md:grid-cols-2">
           {/* Left: text + buttons */}
           <div className="flex items-center px-6 py-16 md:px-20">
             <div className="max-w-xl">
               <TypingText
-              text="Hire great people,"
-              className="text-4xl font-bold leading-tight text-[#0B0A4A] md:text-6xl"
+                text="Hire great people,"
+                className="text-4xl font-bold leading-tight text-[#0B0A4A] md:text-6xl"
               />
               <h1 className="text-[#004DBB] font-bold text-4xl md:text-6xl">
                 <span>faster.</span>
@@ -151,6 +159,82 @@ export default function Home() {
               priority
               className="object-cover"
             />
+          </div>
+        </section>
+        {/* Features */}
+        <section className="w-full py-12 md:py-24 bg-muted flex flex-col items-center">
+          <div className="container px-6 md:px-20">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl text-[#0B0A4A] font-bold tracking-tighter md:text-5xl">
+                  Why choose Hirely?
+                </h2>
+                <p className="max-w-225 text-muted-foreground md:text-2xl/relaxed">
+                  Because hirely is built with both the job seekers and employers in mind. <br className="hidden md:block" /> Also with modern tools and
+                  a clean experience for the users.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-center gap-16 md:gap-20 px-12 md:px-0 py-12 md:grid-cols-3">
+              <div className="flex flex-col items-center space-y-4 text-center">
+                <div className="flex size-12 items-center justify-center rounded-lg bg-primary/10">
+                  <MagnifyingGlass className="size-6 text-primary" />
+                </div>
+                <h3 className="text-xl text-[#0B0A4A] font-bold">Smart Search</h3>
+                <p className="text-muted-foreground">
+                  Find relevant jobs with powerful filtering and search
+                  capabilities.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 text-center">
+                <div className="flex size-12 items-center justify-center rounded-lg bg-primary/10">
+                  <Users className="size-6 text-primary" />
+                </div>
+                <h3 className="text-xl text-[#0B0A4A] font-bold">Easy Applications</h3>
+                <p className="text-muted-foreground">
+                  Apply to jobs in minutes with your profile and uploaded CV.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 text-center">
+                <div className="flex size-12 items-center justify-center rounded-lg bg-primary/10">
+                  <Lightning className="size-6 text-primary" />
+                </div>
+                <h3 className="text-xl text-[#0B0A4A] font-bold">Fast Hiring</h3>
+                <p className="text-muted-foreground">
+                  For employers: Post jobs, review applications, and hire
+                  quickly.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 text-center">
+                <div className="flex size-12 items-center justify-center rounded-lg bg-primary/10">
+                  <ShieldCheck className="size-6 text-primary" />
+                </div>
+                <h3 className="text-xl text-[#0B0A4A] font-bold">Secure & Reliable</h3>
+                <p className="text-muted-foreground">
+                  Built with modern security practices and reliable
+                  infrastructure.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 text-center">
+                <div className="flex size-12 items-center justify-center rounded-lg bg-primary/10">
+                  <Globe className="size-6 text-primary" />
+                </div>
+                <h3 className="text-xl text-[#0B0A4A] font-bold">Remote & Onsite</h3>
+                <p className="text-muted-foreground">
+                  Find opportunities that fit your lifestyle, remote or onsite.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 text-center">
+                <div className="flex size-12 items-center justify-center rounded-lg bg-primary/10">
+                  <Briefcase className="size-6 text-primary" />
+                </div>
+                <h3 className="text-xl text-[#0B0A4A] font-bold">All Industries</h3>
+                <p className="text-muted-foreground">
+                  From tech to design, finance to healthcare — we&apos;ve got
+                  you covered.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </main>
