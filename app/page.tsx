@@ -15,6 +15,9 @@ import {
   Lightning,
   ShieldCheck,
   Globe,
+  FacebookLogo,
+  TwitterLogo,
+  LinkedinLogo
 } from "@phosphor-icons/react";
 
 
@@ -47,16 +50,16 @@ export default function Home() {
                 Companies
               </Link>
               <Link
+                href="/pricing"
+                className="transition-colors hover:text-foreground/90 text-foreground/60"
+              >
+                Pricing
+              </Link>
+              <Link
                 href="/about"
                 className="transition-colors hover:text-foreground/90 text-foreground/60"
               >
                 About us
-              </Link>
-              <Link
-                href="/contact"
-                className="transition-colors hover:text-foreground/90 text-foreground/60"
-              >
-                Contact us
               </Link>
             </nav>
           </div>
@@ -78,7 +81,7 @@ export default function Home() {
                 Log in
               </Button>
               <Separator orientation="vertical" />
-              <Button className="text-lg p-4" render={<Link href="/signup" />} nativeButton={false}>Sign up</Button>
+              <Button className="text-lg p-4 bg-[#004DBB]" render={<Link href="/signup" />} nativeButton={false}>Sign up</Button>
             </nav>
           </div>
         </div>
@@ -93,11 +96,11 @@ export default function Home() {
               <Link href="/companies" className="text-lg transition-colors hover:text-foreground/90 text-foreground/60 font-medium" onClick={() => setOpen(false)}>
                 Companies
               </Link>
+              <Link href="/pricing" className="text-lg transition-colors hover:text-foreground/90 text-foreground/60 font-medium" onClick={() => setOpen(false)}>
+                Pricing
+              </Link>
               <Link href="/about" className="text-lg transition-colors hover:text-foreground/90 text-foreground/60 font-medium" onClick={() => setOpen(false)}>
                 About us
-              </Link>
-              <Link href="/contact" className="text-lg transition-colors hover:text-foreground/90 text-foreground/60 font-medium" onClick={() => setOpen(false)}>
-                Contact us
               </Link>
             </div>
             <Separator />
@@ -106,28 +109,28 @@ export default function Home() {
               <Button variant="ghost" className="text-lg bg-amber-500 p-4" render={<Link href="/login" />} nativeButton={false}>
                 Log in
               </Button>
-              <Button className="text-lg p-4" render={<Link href="/signup" />} nativeButton={false}>Sign up</Button>
+              <Button className="text-lg p-4 bg-[#004DBB]" render={<Link href="/signup" />} nativeButton={false}>Sign up</Button>
             </div>
           </div>
         )}
       </nav>
       {/* Hero section */}
       <main className="flex-1">
-        <section className="grid h-auto md:h-150 grid-cols-1 bg-[#eaeaea] md:grid-cols-2">
+        <section className="grid h-auto md:h-220 grid-cols-1 bg-[#eaeaea] md:grid-cols-2">
           {/* Left: text + buttons */}
           <div className="flex items-center px-6 py-16 md:px-20">
             <div className="max-w-xl">
               <TypingText
-                text="Hire great people,"
+                text="Hire the best Remote talents,"
                 className="text-4xl font-bold leading-tight text-[#0B0A4A] md:text-6xl"
               />
               <h1 className="text-[#004DBB] font-bold text-4xl md:text-6xl">
                 <span>faster.</span>
               </h1>
 
-              <p className="mt-6 text-lg md:text-2xl leading-relaxed text-[#3F4A5A]">
-                Post a job in minutes, reach thousands of qualified candidates, and
-                shortlist the right fit without the back-and-forth.
+              <p className="mt-6 text-lg md:text-3xl leading-relaxed text-[#3F4A5A]">
+                Post a job in minutes, using hirely and reach thousands of qualified candidates, and
+                shortlist the right fit without the back-and-forths.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 md:flex-row">
@@ -162,7 +165,7 @@ export default function Home() {
           </div>
         </section>
         {/* Features */}
-        <section className="w-full py-12 md:py-24 bg-muted flex flex-col items-center">
+        <section className="w-full h-auto md:h- py-25 md:py-50 bg-muted flex flex-col items-center">
           <div className="container px-6 md:px-20">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -238,6 +241,116 @@ export default function Home() {
           </div>
         </section>
       </main>
-    </div>
+
+      {/* footer */}
+      <footer className="flex min-h- flex-col bg-[#0e0e0e] text-white">
+        <div className="flex flex-col justify-between py-12 md:py-26 md:px-12 md:flex-row">
+          {/*brand */}
+          <div className="px-4 md:px-0">
+            <h1 className="text-xl mb-2 md:mb-4 md:text-3xl font-extrabold text-[#004DBB]">
+              hirely
+            </h1>
+            <p className="text-muted-foreground transition-opacity text-sm md:text-2xl">
+              Get the Best remote opportunities and talents
+            </p>
+          </div>
+          {/* info links */}
+          <div className="flex flex-col justify-between md:flex-row mt-4 md:mt-0">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-4 ">
+              {/* product */}
+              <nav className="flex flex-col px-4 md:px-0">
+                <h2 className="text-xl mb-2 md:mb-4 md:text-3xl font-extrabold text-[#004DBB]">
+                  Product
+                </h2>
+                <Link href="/about" className="text-muted-foreground hover:text-gray-400 transition-opacity text-sm md:text-2xl">
+                  About us
+                </Link>
+
+                <Link href="/pricing" className="text-muted-foreground hover:text-gray-400 transition-opacity text-sm md:text-2xl">
+                  Pricing
+                </Link>
+              </nav>
+
+              {/* talent pool */}
+              <nav className="flex flex-col px-4 md:px-0">
+                <h2 className="text-xl mb-2 md:mb-4 md:text-3xl font-extrabold text-[#004DBB]">
+                  Talent Pool
+                </h2>
+                <Link href="/web-developers" className="text-muted-foreground hover:text-gray-400 transition-opacity text-sm md:text-2xl">
+                  Web Developers
+                </Link>
+                <Link href="/product-designers" className="text-muted-foreground hover:text-gray-400 transition-opacity text-sm md:text-2xl">
+                  Product Designers
+                </Link>
+                <Link href="/virtual-assistants" className="text-muted-foreground hover:text-gray-400 transition-opacity text-sm md:text-2xl">
+                  Virtual Assistants
+                </Link>
+                <Link href="/content-creators" className="text-muted-foreground hover:text-gray-400 transition-opacity text-sm md:text-2xl">
+                  Content creators
+                </Link>
+                <Link href="/social-media-managers" className="text-muted-foreground hover:text-gray-400 transition-opacity text-sm md:text-2xl">
+                  Social Media Managers
+                </Link>
+              </nav>
+
+              {/* contact us */}
+              <nav className="flex flex-col px-4 md:px-0">
+                <h2 className="text-xl mb-2 md:mb-4 md:text-3xl font-extrabold text-[#004DBB]">
+                  Contact us
+                </h2>
+                <p className="text-muted-foreground hover:text-gray-400 transition-opacity text-sm md:text-2xl">
+                  contact@hirely.com
+                </p>
+
+                <p className="text-muted-foreground hover:text-gray-400 transition-opacity text-sm md:text-2xl">
+                  +234 7033-5542-53
+                </p>
+              </nav>
+
+              {/* socials */}
+              <nav className="flex flex-col px-4 md:px-0">
+                <h2 className="text-xl mb-4 md:text-3xl font-extrabold text-[#004DBB]">
+                  Follow us
+                </h2>
+                <div className="flex flex-row gap-12">
+                  <Link href="/facebook" aria-label="Facebook" className="text-muted-foreground hover:text-gray-400 transition-opacity text-2xl">
+                    <FacebookLogo size={45} weight="fill" />
+                  </Link>
+                  <Link href="/twitter" aria-label="Twitter" className="text-muted-foreground hover:text-gray-400 transition-opacity text-2xl">
+                    <TwitterLogo size={45} weight="fill" />
+                  </Link>
+                  <Link href="/linkedin" aria-label="LinkedIn" className="text-muted-foreground hover:text-gray-400 transition-opacity text-2xl">
+                    <LinkedinLogo size={45} weight="fill" />
+                  </Link>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom row */}
+        <Separator className="bg-white/10" />
+        <div className="flex flex-col gap-3 text-lg font-light text-muted-foreground my-12 px-4 md:px-12 md:flex-row md:items-center md:justify-between  md:text-[22px]">
+          <span className="text-muted-foreground transition-opacity text-sm md:text-2xl">Copyright © 2026 hirely</span>
+          <span className="text-muted-foregroun transition-opacity text-sm md:text-2xl">
+            All Rights Reserved |{" "}
+            <Link
+              href="/terms"
+              className="text-white underline underline-offset-[3px] transition-opacity hover:text-gray-400"
+            >
+              Terms and Conditions
+            </Link>{" "}
+            |{" "}
+            <Link
+              href="/privacy"
+              className="text-white underline underline-offset-[3px] transition-opacity hover:text-gray-400"
+            >
+              Privacy Policy
+            </Link>
+          </span>
+        </div>
+      </footer>
+
+    </div >
   )
 }
